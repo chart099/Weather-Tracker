@@ -1,12 +1,26 @@
+var weatherAPIKey = "8737753a701727f24ddb366066ef10a6";
+// var weather = "api.openweathermap.org/data/2.5/weather?q="+ currentCity+ "&appid" + weatherAPIKey ;
+
 var todayDate = dayjs().format("MM/DD/YYYY")
 console.log(todayDate);
+
+
 
 $("#search-button").on("click", function (event) {
     event.preventDefault();
     var currentCity = $("#search-bar").val();
-    $("#chosen-city").append($(this).text(currentCity));
-
+    $("#chosen-city").append(currentCity);
+    localStorage.setItem(currentCity, "")
+    // var weather = "https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid=" + weatherAPIkey ;
+    // console.log(weather);
 })
+
+function searchHistory() {
+    var cityButton = $("<button>Hello</button")
+
+    $("#search-history-area").append(cityButton);
+    
+}
 
 
 
