@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets\css\style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+<script>dayjs().format()</script>
+    <title>Weather Tracker</title>
+</head>
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+    <main class="row">
+        <section id="search-area" class="col-3">
+            <h2>Search for a City:</h2>
+            <input type="text" id="search-bar">
+            <button id="search-button" class="btn ">Search</button>
+            <div id="search-history-area"></div>
+        </section>
+        <section id="display-area" class="col-9">
+            <div id="current-data">
+                <span id="chosen-city"></span><span id="today-date"></span>
+                <p id="today-temp">Temp: </p>
+                <p id="today-wind">Wind: </p>
+                <p id="today-humidity">Humidity: </p>
+            </div>
+            <div id="5-day">
+                <h3>5-Day Forecast</h3>
+                <div class="day-forecast"></div>
+                <div class="day-forecast"></div>
+                <div class="day-forecast"></div>
+                <div class="day-forecast"></div>
+                <div class="day-forecast"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+        <script src="assets\js\script.js"></script>
+        
+    </footer>
+</body>
+</html>

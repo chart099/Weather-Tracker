@@ -1,0 +1,13 @@
+header {
+    text-align:center; 
+}
+
+#search-area {
+ 
+    border: red 1px solid; 
+}
+
+#display-area {
+   
+    border: 1px solid blue; 
+}

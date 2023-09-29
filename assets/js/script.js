@@ -1,3 +1,15 @@
+var todayDate = dayjs().format("MM/DD/YYYY")
+console.log(todayDate);
+
+$("#search-button").on("click", function (event) {
+    event.preventDefault();
+    var currentCity = $("#search-bar").val();
+    $("#chosen-city").append($(this).text(currentCity));
+
+})
+
+
+
 // # 06 Server-Side APIs: Weather Dashboard Psuedo
 
 // 1. Setup HTML structure for the page, initialize JS variables
