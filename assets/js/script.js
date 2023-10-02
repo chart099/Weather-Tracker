@@ -4,14 +4,24 @@ var weatherAPIKey = "8737753a701727f24ddb366066ef10a6";
 var todayDate = dayjs().format("MM/DD/YYYY")
 console.log(todayDate);
 
+var city = "Chicago";
+
+// var API = "https://api.openweathermap.org/data/2.5/forecast?lat="+ latitude +"&lon="+ longitude + "&appid=" + weatherAPIKey;
+var API = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + weatherAPIKey;
+
+console.log(API);
+var getCity = function() {
+    var queryCity = document.location.search;
+    
+};
 
 
 $("#search-button").on("click", function (event) {
     event.preventDefault();
     var currentCity = $("#search-bar").val();
-    $("#chosen-city").append(currentCity);
+    $("#chosen-city").text(currentCity );
     localStorage.setItem(currentCity, "")
-    // var weather = "https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid=" + weatherAPIkey ;
+    var weather = "https://api.openweathermap.org/data/2.5/forecast?q=" + currentCity + "&appid=" + weatherAPIKey;
     // console.log(weather);
 })
 
