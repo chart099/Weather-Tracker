@@ -3,11 +3,12 @@ header {
 }
 
 #search-area {
- 
+    height: 100vh;
     border: red 1px solid; 
 }
 
 #display-area {
-   
+   height: 100vh;
     border: 1px solid blue; 
 }
+
