@@ -3,7 +3,8 @@ var weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${currentCi
 
 
 document.getElementById("today-date").innerHTML = dayjs().format("MM/DD/YYYY");
-document.getElementById("day-one").innerHTML = dayjs().format("MM/DD/YYYY").add(dayjs.duration({'days' : 1}));
+document.getElementById("day-one-date").innerHTML = dayjs().format("MM/DD/YYYY").add(dayjs.duration(1, 'day'));
+document.getElementById("day-two-date").innerHTML = dayjs().format("MM/DD/YYYY").add(dayjs.duration(2, 'day'));
 
 const citySubmitHandler = function (event) {
     event.preventDefault();
@@ -31,7 +32,6 @@ const citySubmitHandler = function (event) {
   }
 
   doWeatherApp();
-
 
 
 
