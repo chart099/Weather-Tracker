@@ -14,16 +14,18 @@
     </header>
     <main class="row">
         <section id="search-area" class="col-3">
+            <form id="city-search-form">
             <h2>Search for a City:</h2>
             <input type="text" class="button" id="search-bar">
             <button id="search-button" type="button">Search</button>
+            </form>
             <div id="search-history-area">
 
             </div>
         </section>
         <section id="display-area" class="col-9">
             <div id="current-data">
-                <span id="chosen-city"></span><span id="today-date"></span>
+                <span id="chosen-city"></span><h3 id="today-date"></h3>
                 <p id="today-temp">Temp: </p>
                 <p id="today-wind">Wind: </p>
                 <p id="today-humidity">Humidity: </p>
@@ -53,7 +55,7 @@
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
   crossorigin="anonymous"></script>
-        <script src="/assets/js/script.js"></script>
+        <script src="assets/js/script.js"></script>
         
     </footer>
 </body>
