@@ -1,14 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 header {
     text-align:center; 
 }
 
+main{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: 1px solid red;
+    margin: 0;
+}
+
 #search-area {
-    height: 100vh;
-    border: red 1px solid; 
+   display: flex;
+   width: 25%;
+}
+
+#search-area > form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid red;
 }
 
 #display-area {
-   height: 100vh;
-    border: 1px solid blue; 
+    display: flex;
+    flex-direction: column;
 }
 
+#current-data {
+    background-color: aliceblue;
+    text-align: center;
+}
+
+#five-day{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.day-forecast {
+    width: 200px;
+    text-align: left;
+    background-color: aliceblue;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.day-forecast > div {
+    text-align: center;
+}
+
+@media screen and (max-width: 800px){
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    #search-area{
+        width: 1000px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #search-area > form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border: 1px solid red;
+    }
+
+    #display-area{
+        display: flex;
+        justify-content: space-around;
+    }
+    #search-history-area{
+        display: none;
+    }
+
+}   
