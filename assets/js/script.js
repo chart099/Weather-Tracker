@@ -1,5 +1,13 @@
-var weatherAPIKey = "8737753a701727f24ddb366066ef10a6";
+const weatherAPIKey = `8737753a701727f24ddb366066ef10a6`;
 // var weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${currentCity}&appid=${weatherAPIKey}`;
+var searchHistory = [];
+var weatherApiRootUrl = 'https://api.openweathermap.org';
+
+var searchForm = document.querySelector('#search-form');
+var searchInput = document.querySelector('#search-input');
+var todayContainer = document.querySelector('#today');
+var forecastContainer = document.querySelector('#forecast');
+var searchHistoryContainer = document.querySelector('#history');
 
 // Add timezone plugins to day.js
 dayjs.extend(window.dayjs_plugin_utc);
@@ -170,7 +178,7 @@ function fetchWeather(location) {
   var { lon } = location;
   var city = location.name;
 
-  var apiUrl = `${weatherApiRootUrl}/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${weatherApiKey}`;
+  var apiUrl = `${weatherApiRootUrl}/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${weatherAPIKey}`;
 
   fetch(apiUrl)
     .then(function (res) {
@@ -185,7 +193,8 @@ function fetchWeather(location) {
 }
 
 function fetchCoords(search) {
-  var apiUrl = `${weatherApiRootUrl}/geo/1.0/direct?q=${search}&limit=5&appid=${weatherApiKey}`;
+ 
+  var apiUrl = `${weatherApiRootUrl}/geo/1.0/direct?q=${search}&limit=5&appid=${weatherAPIKey}`;
 
   fetch(apiUrl)
     .then(function (res) {
@@ -196,7 +205,6 @@ function fetchCoords(search) {
         alert('Location not found');
       } else {
         appendToHistory(search);
-        console.log(data);
         fetchWeather(data[0]);
       }
     })
